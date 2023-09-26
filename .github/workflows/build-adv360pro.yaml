@@ -1,0 +1,11 @@
+name: 'Build adv360pro'
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["adv360pro_left", "adv360pro_right"]'
